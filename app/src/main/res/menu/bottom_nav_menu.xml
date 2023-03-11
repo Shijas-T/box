@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/menu_item_home"
+        android:title="Home"
+        android:icon="@mipmap/ic_home"/>
+    <item
+        android:id="@+id/menu_item_sell"
+        android:title="Sell"
+        android:icon="@mipmap/ic_sell"/>
+    <item
+        android:id="@+id/menu_item_account"
+        android:title="Account"
+        android:icon="@mipmap/ic_account"/>
 </menu>

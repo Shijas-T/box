@@ -12,5 +12,7 @@
 
     <string name="register">New User? \n<u>Click to Register</u></string>
     <string name="admin_login">Login as Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
