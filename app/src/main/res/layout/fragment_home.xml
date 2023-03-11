@@ -44,7 +44,7 @@
             </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Laptop card view -->
+        <!-- book card view -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_book"
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/ic_laptop"/>
+                    android:src="@mipmap/ic_book"/>
                 <!-- book text view -->
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
@@ -74,10 +74,212 @@
                     android:textSize="16sp"/>
             </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
         </com.google.android.material.card.MaterialCardView>
-
-
-
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
+        <!-- calculator card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- calculator image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_calculator"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_calculator"/>
+                <!-- calculator text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_calculator"
+                    android:layout_centerHorizontal="true"
+                    android:text="Calculator"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- stationary card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_stationary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- stationary image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_stationary"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_stationary"/>
+                <!-- stationary text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_stationary"
+                    android:layout_centerHorizontal="true"
+                    android:text="Stationary"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- hostel item card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_hostel_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- hostel item image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_hostel_item"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_hostel_item"/>
+                <!-- hostel item text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_hostel_item"
+                    android:layout_centerHorizontal="true"
+                    android:text="Hostel Item"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Vehicle card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_Vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- Vehicle image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_Vehicle"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_vehicle"/>
+                <!-- Vehicle text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_Vehicle"
+                    android:layout_centerHorizontal="true"
+                    android:text="Vehicle"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Lab coat card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_lab_coat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- lab coat image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_lab_coat"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_lab_coat"/>
+                <!-- lab coat text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_lab_coat"
+                    android:layout_centerHorizontal="true"
+                    android:text="Lab Coat"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- bag card view -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_bag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- bag image view -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ig_bag"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_bag"/>
+                <!-- bag text view -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ig_bag"
+                    android:layout_centerHorizontal="true"
+                    android:text="Bag"
+                    android:textSize="16sp"/>
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 </LinearLayout>
