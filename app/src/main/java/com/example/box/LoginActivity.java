@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     //Declaration
-    private TextView textViewNewSellerRegistration, textViewNewUserRegistration, textViewForgetPassWord;
+    private TextView textViewAdminLogin, textViewNewUserRegistration, textViewForgetPassWord;
     private Button buttonLogin;
 
     @Override
@@ -44,13 +44,13 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 
-//        textViewNewSellerRegistration.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, RecentActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        textViewAdminLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         textViewNewUserRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
     private void onMenu() {
         buttonLogin = findViewById(R.id.Button_login);
         textViewForgetPassWord = findViewById(R.id.TextView_forgotPassword);
-        textViewNewSellerRegistration = findViewById(R.id.TextView_newSellerRegistration);
+        textViewAdminLogin = findViewById(R.id.TextView_newSellerRegistration);
         textViewNewUserRegistration = findViewById(R.id.TextView_newUserRegistration);
     }
 }
