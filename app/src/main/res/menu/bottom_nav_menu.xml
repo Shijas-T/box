@@ -3,13 +3,16 @@
     <item
         android:id="@+id/menu_item_home"
         android:title="Home"
-        android:icon="@mipmap/ic_home"/>
+        android:icon="@drawable/ic_home"
+        android:enabled="true"/>
     <item
         android:id="@+id/menu_item_sell"
         android:title="Sell"
-        android:icon="@mipmap/ic_sell"/>
+        android:icon="@drawable/ic_sell"
+        android:enabled="true"/>
     <item
         android:id="@+id/menu_item_account"
         android:title="Account"
-        android:icon="@mipmap/ic_account"/>
+        android:icon="@drawable/ic_account"
+        android:enabled="true"/>
 </menu>
