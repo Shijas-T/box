@@ -1,9 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginPageProgressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="32dp"
+        android:text="Welcome!"
+        android:textSize="48sp" />
+
+    <LinearLayout
+        android:id="@+id/loginForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_margin="48dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/EditText_usernameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/EditText_passwordLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginForm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/TextView_forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Button_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Forgot Password?"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/TextView_newSellerRegistration"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/sellerRegister"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/TextView_newUserRegistration"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginBottom="12dp"
+            android:text="@string/register"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
