@@ -1,5 +1,6 @@
 package com.example.box;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -46,30 +47,24 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent(getContext(), BrowseActivity.class);
+        startActivity(intent);
         switch (v.getId()) {
             case R.id.card_laptop:
-                Toast.makeText(getContext(), "1" , Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_book:
-                Toast.makeText(getContext(), "2", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_calculator:
-                Toast.makeText(getContext(), "3", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_stationary:
-                Toast.makeText(getContext(), "4", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_hostel_item:
-                Toast.makeText(getContext(), "5", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_Vehicle:
-                Toast.makeText(getContext(), "6", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_lab_coat:
-                Toast.makeText(getContext(), "7", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_bag:
-                Toast.makeText(getContext(), "it's working", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
