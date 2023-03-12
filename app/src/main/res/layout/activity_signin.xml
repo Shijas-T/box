@@ -32,21 +32,20 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editText_firstName"
+            android:id="@+id/editText_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="First Name"
+            android:hint="Name"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText_lastName"
+            android:id="@+id/editText_usn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName" />
+            android:hint="USN" />
 
         <!--<EditText-->
         <!--android:id="@+id/phoneNumber"-->

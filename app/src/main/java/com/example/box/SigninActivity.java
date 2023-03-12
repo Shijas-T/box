@@ -12,7 +12,7 @@ public class SigninActivity extends AppCompatActivity {
 
     //Declaration
     private Button buttonRegister;
-    private EditText editTextFName, editTextLName, editTextEmail, editTextPassWord, editTextPassWordConfirmation;
+    private EditText editTextName, editTextUsn, editTextEmail, editTextPassWord, editTextPassWordConfirmation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,8 @@ public class SigninActivity extends AppCompatActivity {
     //Initialization (all views are initialized in this function)
     private void onMenu() {
         buttonRegister = findViewById(R.id.button_register);
-        editTextFName = findViewById(R.id.editText_firstName);
-        editTextLName = findViewById(R.id.editText_lastName);
+        editTextName = findViewById(R.id.editText_Name);
+        editTextUsn = findViewById(R.id.editText_usn);
         editTextEmail = findViewById(R.id.edit_text_user_email);
         editTextPassWord = findViewById(R.id.edit_text_password);
         editTextPassWordConfirmation = findViewById(R.id.edit_text_password_confirmation);
