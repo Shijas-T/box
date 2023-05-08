@@ -1,5 +1,9 @@
 package com.example.box;
 
+import static android.app.Activity.RESULT_OK;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SellFragment extends Fragment {
@@ -21,6 +26,11 @@ public class SellFragment extends Fragment {
     private Button buttonSubmit;
     private EditText editTextProductName, editTextProductPrice, editTextProductDescription;
     private AutoCompleteTextView autoCompleteTextViewCategory;
+    private ImageView imageViewProduct;
+
+    int SELECT_PICTURE = 200;
+
+
 
     public SellFragment() {
         // Required empty public constructor
@@ -56,6 +66,21 @@ public class SellFragment extends Fragment {
             }
         });
 
+        imageViewProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // create an instance of the
+                // intent of the type image
+                Intent i = new Intent();
+                i.setType("image/*");
+                i.setAction(Intent.ACTION_GET_CONTENT);
+
+                // pass the constant to compare it
+                // with the returned requestCode
+                startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
+            }
+        });
+
     }
 
     //Initialization (all views are initialized in this function)
@@ -65,6 +90,7 @@ public class SellFragment extends Fragment {
         editTextProductDescription = view.findViewById(R.id.edit_text_product_description);
         buttonSubmit = view.findViewById(R.id.btn_addProductSubmit);
         autoCompleteTextViewCategory = view.findViewById(R.id.auto_complete_tv_category);
+        imageViewProduct = view.findViewById(R.id.img_product_photo_to_sell);
     }
 
     @Override
@@ -76,5 +102,25 @@ public class SellFragment extends Fragment {
     public void onStop() {
         super.onStop();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Box");
+    }
+
+    // this function is triggered when user
+    // selects the image from the imageChooser
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+
+            // compare the resultCode with the
+            // SELECT_PICTURE constant
+            if (requestCode == SELECT_PICTURE) {
+                // Get the url of the image from data
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    // update the preview image in the layout
+                    imageViewProduct.setImageURI(selectedImageUri);
+                }
+            }
+        }
     }
 }
