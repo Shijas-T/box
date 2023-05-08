@@ -31,21 +31,21 @@
         android:layout_margin="32dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+<!--        <EditText-->
+<!--            android:id="@+id/editText_Name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Name"-->
+<!--            android:inputType="textPersonName" />-->
 
-        <EditText
-            android:id="@+id/editText_usn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="USN" />
+<!--        <EditText-->
+<!--            android:id="@+id/editText_usn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:ems="10"-->
+<!--            android:hint="USN" />-->
 
         <!--<EditText-->
         <!--android:id="@+id/phoneNumber"-->
@@ -74,14 +74,14 @@
             android:hint="@string/prompt_password"
             android:inputType="textPassword" />
 
-        <EditText
-            android:id="@+id/edit_text_password_confirmation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Verify Password"
-            android:inputType="textPassword" />
+<!--        <EditText-->
+<!--            android:id="@+id/edit_text_password_confirmation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Verify Password"-->
+<!--            android:inputType="textPassword" />-->
     </LinearLayout>
 
     <Button
