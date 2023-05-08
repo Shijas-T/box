@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@mipmap/ic_lap_stock"
+        android:layout_alignParentTop="true"
+        android:id="@+id/img_product_photo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lap Name"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_product_name"
+        android:layout_below="@+id/img_product_photo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="product description"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_product_description"
+        android:layout_below="@+id/tv_product_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42,000"
+        android:layout_margin="10dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_product_price"
+        android:layout_below="@+id/tv_product_description"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:text="contact seller"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_call_seller"/>
+
+</RelativeLayout>

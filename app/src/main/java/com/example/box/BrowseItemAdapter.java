@@ -1,6 +1,7 @@
 package com.example.box;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +52,9 @@ public class BrowseItemAdapter extends RecyclerView.Adapter<BrowseItemAdapter.Vi
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,arrayListAllItem.get(position).getProductName()+"\tselected",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context,arrayListAllItem.get(position).getProductName()+"\tselected",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, ProductInDetailActivity.class);
+                context.startActivity(intent);
             }
         });
 
@@ -87,5 +90,4 @@ public class BrowseItemAdapter extends RecyclerView.Adapter<BrowseItemAdapter.Vi
             parent = itemView.findViewById(R.id.single_list_item);
         }
     }
-
 }

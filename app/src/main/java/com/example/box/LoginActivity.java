@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
     //Initialization (all views are initialized in this function)
     private void onMenu() {
         buttonLogin = findViewById(R.id.Button_login);
-        textViewForgetPassWord = findViewById(R.id.TextView_forgotPassword);
+//        textViewForgetPassWord = findViewById(R.id.TextView_forgotPassword);
         textViewAdminLogin = findViewById(R.id.TextView_newSellerRegistration);
         textViewNewUserRegistration = findViewById(R.id.TextView_newUserRegistration);
     }

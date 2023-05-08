@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="shuhib"
+                    android:text="shuhaib"
                     android:textSize="28dp"
                     android:textStyle="bold"/>
 
@@ -68,10 +68,10 @@
                         android:layout_height="30dp"
                         android:background="@color/profilePrimaryDark"/>
 
-                    <TextView
-                        style="@style/profileStyledBackButton"
-                        android:text="EDIT"
-                        android:id="@+id/text_view_edit"/>
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_view_edit"-->
+<!--                        style="@style/profileStyledBackButton"-->
+<!--                        android:text="EDIT" />-->
                 </RelativeLayout>
 
             </LinearLayout>
