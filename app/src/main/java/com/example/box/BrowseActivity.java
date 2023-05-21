@@ -22,11 +22,11 @@ public class BrowseActivity extends AppCompatActivity {
 
         //Dummy Data
         ArrayList<ProductModel> arrayListAllItem = new ArrayList<>();
-        arrayListAllItem.add(new ProductModel("dfsf","ThinkPad X1 Nano","40,000","for rent. In good quality"));
-        arrayListAllItem.add(new ProductModel("dfjsf","MacBook Air","28,000","for rent"));
-        arrayListAllItem.add(new ProductModel("dfsf","Zephyrus G15","48,000","best gaming laptop"));
-        arrayListAllItem.add(new ProductModel("dfsf","Dell XPS 13","35,999","ideal for office use"));
-        arrayListAllItem.add(new ProductModel("dfsf","MacBook Pro","38,600","apple macbook pro for rent"));
+//        arrayListAllItem.add(new ProductModel("dfsf","ThinkPad X1 Nano","40,000","for rent. In good quality"));
+//        arrayListAllItem.add(new ProductModel("dfjsf","MacBook Air","28,000","for rent"));
+//        arrayListAllItem.add(new ProductModel("dfsf","Zephyrus G15","48,000","best gaming laptop"));
+//        arrayListAllItem.add(new ProductModel("dfsf","Dell XPS 13","35,999","ideal for office use"));
+//        arrayListAllItem.add(new ProductModel("dfsf","MacBook Pro","38,600","apple macbook pro for rent"));
 
         //recycler view initializing and seting
         BrowseItemAdapter adapter = new BrowseItemAdapter(this);
