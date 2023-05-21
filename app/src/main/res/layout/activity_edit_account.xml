@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAccountActivity">
+
+    <LinearLayout
+        android:id="@+id/registrationForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="33dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_usn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="USN"/>
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Mobile"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/registrationForm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="update" />
+
+</RelativeLayout>

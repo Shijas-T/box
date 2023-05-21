@@ -1,5 +1,6 @@
 package com.example.box;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +38,8 @@ public class AccountFragment extends Fragment {
         textViewEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "under development", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), EditAccountActivity.class);
+                startActivity(intent);
             }
         });
     }

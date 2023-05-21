@@ -19,7 +19,7 @@
         <TextView
             style="@style/headerText"
             android:text="Account Info"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="5dp"/>
 
         <RelativeLayout style="@style/profileDetailsLayout">
             <ImageView
@@ -93,25 +93,6 @@
             <TextView
                 android:text="shuhaib@gmail.com"
                 android:layout_toRightOf="@id/emailImageView"
-                style="@style/profileDetailsMiniText" />
-
-        </RelativeLayout>
-
-        <View style="@style/proifleDetailsView" />
-        <RelativeLayout style="@style/profileDetailsLayout">
-            <ImageView
-                android:id="@+id/addressImageView"
-                android:src="@mipmap/ic_address"
-                style="@style/profileDetailsImage" />
-
-            <TextView
-                android:text="Address"
-                android:layout_toRightOf="@id/addressImageView"
-                style="@style/profileDetailsTextMain" />
-
-            <TextView
-                android:text="Kasaragod, kerala"
-                android:layout_toRightOf="@id/addressImageView"
                 style="@style/profileDetailsMiniText" />
 
         </RelativeLayout>
