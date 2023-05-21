@@ -1,6 +1,8 @@
 package com.example.box;
 
-public class ProductModel {
+import java.io.Serializable;
+
+public class ProductModel implements Serializable {
 
     private String productName;
     private String productCategory;

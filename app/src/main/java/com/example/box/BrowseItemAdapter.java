@@ -63,6 +63,7 @@ public class BrowseItemAdapter extends RecyclerView.Adapter<BrowseItemAdapter.Vi
             public void onClick(View v) {
 //                Toast.makeText(context,arrayListAllItem.get(position).getProductName()+"\tselected",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, ProductInDetailActivity.class);
+                intent.putExtra("product", arrayListAllItem.get(position));
                 context.startActivity(intent);
             }
         });

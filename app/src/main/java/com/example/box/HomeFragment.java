@@ -48,25 +48,33 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getContext(), BrowseActivity.class);
-        startActivity(intent);
         switch (v.getId()) {
             case R.id.card_laptop:
+                intent.putExtra("category","Laptop");
                 break;
             case R.id.card_book:
+                intent.putExtra("category","Book");
                 break;
             case R.id.card_calculator:
+                intent.putExtra("category","Calculator");
                 break;
             case R.id.card_stationary:
+                intent.putExtra("category","Stationary");
                 break;
             case R.id.card_hostel_item:
+                intent.putExtra("category","Hostel Item");
                 break;
             case R.id.card_Vehicle:
+                intent.putExtra("category","Vehicle");
                 break;
             case R.id.card_lab_coat:
+                intent.putExtra("category","Lab Coat");
                 break;
             case R.id.card_bag:
+                intent.putExtra("category","Bag");
                 break;
         }
+        startActivity(intent);
     }
     //Initialization (all views are initialized in this function)
     private void onFragment() {

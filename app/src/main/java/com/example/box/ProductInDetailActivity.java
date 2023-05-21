@@ -10,11 +10,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class ProductInDetailActivity extends AppCompatActivity {
 
     //Declaration
     private Button buttonCallSeller;
+    private TextView textViewProductName, textViewProductPrice, textViewProductDescription;
+    private ImageView imageViewProduct;
+    ProductModel product;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +31,20 @@ public class ProductInDetailActivity extends AppCompatActivity {
 
         //Initialization
         buttonCallSeller = findViewById(R.id.btn_call_seller);
+        textViewProductName = findViewById(R.id.tv_product_name);
+        textViewProductPrice = findViewById(R.id.tv_product_price);
+        textViewProductDescription = findViewById(R.id.tv_product_description);
+        imageViewProduct = findViewById(R.id.img_product_photo);
+
+        product = (ProductModel) getIntent().getSerializableExtra("product");
+
+        textViewProductName.setText(product.getProductName());
+        textViewProductDescription.setText(product.getProductDescription());
+        textViewProductPrice.setText("₹" + product.getProductPrice());
+        Picasso.with(this).load(product.getProductImageUrl() == null ? null : product.getProductImageUrl())
+                .placeholder(R.mipmap.ic_lap_stock)
+                .error(R.mipmap.ic_lap_stock)
+                .into(imageViewProduct);
 
         buttonCallSeller.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -35,6 +36,9 @@ public class BrowseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
+        Intent intent=getIntent();
+        String filterCategory = intent.getStringExtra("category");
+
         recyclerViewListItem = findViewById(R.id.recyclerview_all_items);
         recyclerViewListItem.setHasFixedSize(true);
         recyclerViewListItem.setLayoutManager(new LinearLayoutManager(this));
@@ -50,7 +54,8 @@ public class BrowseActivity extends AppCompatActivity {
         // below line is use to get the data from Firebase Firestore.
         // previously we were saving data on a reference of Courses
         // now we will be getting the data from the same reference.
-        db.collection("Products").get()
+        db.collection("Products").whereEqualTo("productCategory", filterCategory)
+                .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

@@ -6,29 +6,32 @@
     android:orientation="vertical">
 
     <ImageView
-        android:scaleType="fitCenter"
+        android:id="@+id/img_product_photo"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:src="@mipmap/ic_lap_stock"
         android:layout_alignParentTop="true"
-        android:id="@+id/img_product_photo"/>
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_lap_stock" />
 
     <TextView
+        android:id="@+id/tv_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/img_product_photo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Lap Name"
-        android:layout_margin="10dp"
-        android:textSize="18sp"
         android:textColor="@color/black"
-        android:id="@+id/tv_product_name"
-        android:layout_below="@+id/img_product_photo"/>
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="product description"
         android:layout_margin="15dp"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:id="@+id/tv_product_description"
         android:layout_below="@+id/tv_product_name"/>
 
@@ -37,14 +40,14 @@
         android:layout_height="wrap_content"
         android:text="42,000"
         android:layout_margin="10dp"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:textColor="@color/black"
         android:id="@+id/tv_product_price"
         android:layout_below="@+id/tv_product_description"/>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
         android:text="contact seller"
         android:layout_alignParentBottom="true"
