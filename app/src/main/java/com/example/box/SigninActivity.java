@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SigninActivity extends AppCompatActivity {
 
@@ -26,6 +33,10 @@ public class SigninActivity extends AppCompatActivity {
     private TextView textViewBackToLogin;
     private FirebaseAuth mAuth;
     private ProgressBar progressbar;
+
+    // creating a variable
+    // for firebaseFirestore.
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +48,10 @@ public class SigninActivity extends AppCompatActivity {
 
         // taking FirebaseAuth instance
         mAuth = FirebaseAuth.getInstance();
+
+        // getting our instance
+        // from Firebase Firestore.
+        db = FirebaseFirestore.getInstance();
 
         onMenu(); //Views in menu
         onClick();//On clickListener
@@ -112,6 +127,15 @@ public class SigninActivity extends AppCompatActivity {
                                             Toast.LENGTH_LONG)
                                     .show();
 
+                            // calling method to add data to Firebase Firestore.
+                            addDataToFirestore(email);
+
+                            // email for later use
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("email",email);
+                            editor.apply();
+
                             // hide the progress bar
                             progressbar.setVisibility(View.GONE);
 
@@ -137,5 +161,32 @@ public class SigninActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void addDataToFirestore(String email) {
+
+        // creating a collection reference
+        // for our Firebase Firestore database.
+        CollectionReference dbUsers = db.collection("Users");
+
+        // adding our data to our courses object class.
+        AccountModel user = new AccountModel("", "", "", email);
+
+        // below method is use to add data to Firebase Firestore.
+        dbUsers.document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void avoid) {
+                // after the data addition is successful
+                // we are displaying a success toast message.
+//                Toast.makeText(SigninActivity.this, "Your Course has been added to Firebase Firestore", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                // this method is called when the data addition process is failed.
+                // displaying a toast message when data addition is failed.
+//                Toast.makeText(SigninActivity.this, "Fail to add course \n" + e, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

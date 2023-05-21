@@ -34,7 +34,8 @@
                 style="@style/profileDetailsTextMain" />
 
             <TextView
-                android:text="Shuhib"
+                android:id="@+id/tv_use_name"
+                android:text=""
                 android:layout_toRightOf="@id/nameImageView"
                 style="@style/profileDetailsMiniText" />
 
@@ -53,7 +54,8 @@
                 style="@style/profileDetailsTextMain" />
 
             <TextView
-                android:text="4BP19CS036"
+                android:id="@+id/tv_user_usn"
+                android:text=""
                 android:layout_toRightOf="@id/usnImageView"
                 style="@style/profileDetailsMiniText" />
 
@@ -72,7 +74,8 @@
                 style="@style/profileDetailsTextMain"/>
 
             <TextView
-                android:text="+91-8129999999"
+                android:id="@+id/tv_user_mobile_no"
+                android:text=""
                 android:layout_toRightOf="@id/mobileImageView"
                 style="@style/profileDetailsMiniText" />
 
@@ -86,12 +89,13 @@
                 style="@style/profileDetailsImage" />
 
             <TextView
-                android:text="Email"
+                style="@style/profileDetailsTextMain"
                 android:layout_toRightOf="@id/emailImageView"
-                style="@style/profileDetailsTextMain" />
+                android:text="Email" />
 
             <TextView
-                android:text="shuhaib@gmail.com"
+                android:id="@+id/tv_user_email"
+                android:text=""
                 android:layout_toRightOf="@id/emailImageView"
                 style="@style/profileDetailsMiniText" />
 
