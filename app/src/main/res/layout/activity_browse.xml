@@ -7,6 +7,12 @@
     tools:context=".BrowseActivity"
     android:id="@+id/layout_browse_activity">
 
+    <ProgressBar
+        android:id="@+id/progress_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
     <!--Recycler View-->
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

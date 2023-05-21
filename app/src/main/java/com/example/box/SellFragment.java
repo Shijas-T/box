@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,7 @@ public class SellFragment extends Fragment {
     private ImageView imageViewProduct;
     private ProgressBar mProgressBar;
 
-    private String name, category, price, description;
+    private String name, category, price, description, url;
 
     int SELECT_PICTURE = 200;
     Uri selectedImageUri;
@@ -58,6 +59,7 @@ public class SellFragment extends Fragment {
 
     private StorageTask mUploadTask;
 
+    transient private static final String TAG = "SellFragment";
 
     public SellFragment() {
         // Required empty public constructor
@@ -198,8 +200,14 @@ public class SellFragment extends Fragment {
                             }, 500);
 
                             Toast.makeText(getContext(), "Image uploaded", Toast.LENGTH_LONG).show();
-                            ProductModel product = new ProductModel( name, category, price, description,
-                                    taskSnapshot.getStorage().getDownloadUrl().toString());
+                            taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+//                                    Log.e(TAG, "onSuccess: " + uri.toString());
+                                    url = uri.toString();
+                                }
+                            });
+                            ProductModel product = new ProductModel( name, category, price, description, url);
 
                             //add product details to fireStore
 
