@@ -63,13 +63,13 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 
-        textViewAdminLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
-                startActivity(intent);
-            }
-        });
+//        textViewAdminLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         textViewNewUserRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
     private void onMenu() {
         buttonLogin = findViewById(R.id.Button_login);
 //        textViewForgetPassWord = findViewById(R.id.TextView_forgotPassword);
-        textViewAdminLogin = findViewById(R.id.TextView_newSellerRegistration);
+//        textViewAdminLogin = findViewById(R.id.TextView_newSellerRegistration);
         textViewNewUserRegistration = findViewById(R.id.TextView_newUserRegistration);
         progressbar = findViewById(R.id.loginPageProgressBar);
         editTextLoginEmail = findViewById(R.id.EditText_usernameLogin);

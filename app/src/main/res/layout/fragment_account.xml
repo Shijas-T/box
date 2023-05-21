@@ -68,10 +68,10 @@
                         android:layout_height="30dp"
                         android:background="@color/profilePrimaryDark"/>
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/text_view_edit"-->
-<!--                        style="@style/profileStyledBackButton"-->
-<!--                        android:text="EDIT" />-->
+                    <TextView
+                        android:id="@+id/text_view_edit"
+                        style="@style/profileStyledBackButton"
+                        android:text="EDIT" />
                 </RelativeLayout>
 
             </LinearLayout>
