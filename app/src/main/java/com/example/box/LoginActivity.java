@@ -49,27 +49,9 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//                startActivity(intent);
                 loginUserAccount();
             }
         });
-
-//        textViewForgetPassWord.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, RecentActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
-//        textViewAdminLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         textViewNewUserRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,20 +61,15 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     //Initialization (all views are initialized in this function)
     private void onMenu() {
         buttonLogin = findViewById(R.id.Button_login);
-//        textViewForgetPassWord = findViewById(R.id.TextView_forgotPassword);
-//        textViewAdminLogin = findViewById(R.id.TextView_newSellerRegistration);
         textViewNewUserRegistration = findViewById(R.id.TextView_newUserRegistration);
         progressbar = findViewById(R.id.loginPageProgressBar);
         editTextLoginEmail = findViewById(R.id.EditText_usernameLogin);
         editTextLoginPassWord = findViewById(R.id.EditText_passwordLogin);
-
     }
 
     private void loginUserAccount()
@@ -108,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // validations for input email and password
         if (TextUtils.isEmpty(email)) {
+            progressbar.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(),
                             "Please enter email!!",
                             Toast.LENGTH_LONG)
@@ -116,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (TextUtils.isEmpty(password)) {
+            progressbar.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(),
                             "Please enter password!!",
                             Toast.LENGTH_LONG)
@@ -147,9 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                                             HomeActivity.class);
                                     startActivity(intent);
                                     finish();
-                                }
-
-                                else {
+                                } else {
 
                                     // sign-in failed
                                     Toast.makeText(getApplicationContext(),

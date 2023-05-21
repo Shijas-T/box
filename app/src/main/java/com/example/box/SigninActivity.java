@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,11 +22,10 @@ public class SigninActivity extends AppCompatActivity {
 
     //Declaration
     private Button buttonRegister;
-    private EditText editTextName, editTextUsn, editTextEmail, editTextPassWord, editTextPassWordConfirmation;
+    private EditText editTextEmail, editTextPassWord;
+    private TextView textViewBackToLogin;
     private FirebaseAuth mAuth;
     private ProgressBar progressbar;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,6 @@ public class SigninActivity extends AppCompatActivity {
 
         //Hide the action bar
         getSupportActionBar().hide();
-
 
         // taking FirebaseAuth instance
         mAuth = FirebaseAuth.getInstance();
@@ -48,23 +47,26 @@ public class SigninActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
-//                startActivity(intent);
                 registerNewUser();
+            }
+        });
 
+        textViewBackToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SigninActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
     //Initialization (all views are initialized in this function)
     private void onMenu() {
         buttonRegister = findViewById(R.id.button_register);
-//        editTextName = findViewById(R.id.editText_Name);
-//        editTextUsn = findViewById(R.id.editText_usn);
         editTextEmail = findViewById(R.id.edit_text_user_email);
         editTextPassWord = findViewById(R.id.edit_text_password);
-//        editTextPassWordConfirmation = findViewById(R.id.edit_text_password_confirmation);
+        textViewBackToLogin = findViewById(R.id.tv_back_to_login);
         progressbar = findViewById(R.id.registrationPageProgressBar);
-
     }
 
     private void registerNewUser()
@@ -80,6 +82,7 @@ public class SigninActivity extends AppCompatActivity {
 
         // Validations for input email and password
         if (TextUtils.isEmpty(email)) {
+            progressbar.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(),
                             "Please enter email!!",
                             Toast.LENGTH_LONG)
@@ -87,6 +90,7 @@ public class SigninActivity extends AppCompatActivity {
             return;
         }
         if (TextUtils.isEmpty(password)) {
+            progressbar.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(),
                             "Please enter password!!",
                             Toast.LENGTH_LONG)
@@ -111,7 +115,7 @@ public class SigninActivity extends AppCompatActivity {
                             // hide the progress bar
                             progressbar.setVisibility(View.GONE);
 
-                            // if the user created intent to login activity
+                            // if the user created intent to home activity
                             Intent intent
                                     = new Intent(SigninActivity.this,
                                     HomeActivity.class);
@@ -134,6 +138,4 @@ public class SigninActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
 }

@@ -30,8 +30,6 @@ public class SellFragment extends Fragment {
 
     int SELECT_PICTURE = 200;
 
-
-
     public SellFragment() {
         // Required empty public constructor
     }
@@ -62,7 +60,6 @@ public class SellFragment extends Fragment {
             public void onClick(View view) {
 
                 Toast.makeText(getContext(), autoCompleteTextViewCategory.getText().toString(), Toast.LENGTH_SHORT).show();
-//                  Toast.makeText(getContext(), editTextProductDescription.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

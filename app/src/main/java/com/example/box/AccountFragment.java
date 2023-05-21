@@ -34,17 +34,17 @@ public class AccountFragment extends Fragment {
 
     // Click listeners
     private void onClick() {
-//        textViewEdit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(getContext(), "under development", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        textViewEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "under development", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //Initialization (all views are initialized in this function)
     private void onFragment() {
-//        textViewEdit = view.findViewById(R.id.text_view_edit);
+        textViewEdit = view.findViewById(R.id.text_view_edit);
     }
 
     @Override
