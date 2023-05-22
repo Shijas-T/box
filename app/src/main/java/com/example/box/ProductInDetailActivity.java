@@ -42,8 +42,8 @@ public class ProductInDetailActivity extends AppCompatActivity {
         textViewProductDescription.setText(product.getProductDescription());
         textViewProductPrice.setText("₹" + product.getProductPrice());
         Picasso.with(this).load(product.getProductImageUrl() == null ? null : product.getProductImageUrl())
-                .placeholder(R.mipmap.ic_lap_stock)
-                .error(R.mipmap.ic_lap_stock)
+                .placeholder(R.mipmap.ic_loading)
+                .error(R.mipmap.ic_loading)
                 .into(imageViewProduct);
 
         buttonCallSeller.setOnClickListener(new View.OnClickListener() {

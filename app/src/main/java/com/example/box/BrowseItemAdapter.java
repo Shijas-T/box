@@ -52,8 +52,8 @@ public class BrowseItemAdapter extends RecyclerView.Adapter<BrowseItemAdapter.Vi
         holder.textViewProductDescription.setText(arrayListAllItem.get(position).getProductDescription());
         holder.textViewProductPrice.setText("₹" + arrayListAllItem.get(position).getProductPrice());
         Picasso.with(context).load(arrayListAllItem.get(position).getProductImageUrl() == null ? null : arrayListAllItem.get(position).getProductImageUrl())
-                .placeholder(R.mipmap.ic_lap_stock)
-                .error(R.mipmap.ic_lap_stock)
+                .placeholder(R.mipmap.ic_loading)
+                .error(R.mipmap.ic_loading)
                 .into(holder.imageViewProductImage);
         //        Log.e(TAG, "onBindViewHolder: "+ arrayListAllItem.get(position).getProductImageUrl());
 
